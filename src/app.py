@@ -28,8 +28,8 @@ page = st.sidebar.radio("Go to", ["Home", "Currency Exchange", "Destination Info
 # API keys (stored securely using environment variables)
 import os
 HUGGINGFACE_API_KEY = os.getenv("HUGGINGFACE_API_KEY", "")
-EXCHANGERATE_API_KEY = os.getenv("EXCHANGERATE_API_KEY", "8a8b4a70a1114ee59fc259e6e6bebc5b")
-WEATHER_API_KEY = os.getenv("WEATHER_API_KEY", "d89887612c2be9d0475946723c531bce")
+EXCHANGERATE_API_KEY = os.getenv("EXCHANGERATE_API_KEY", "")
+WEATHER_API_KEY = os.getenv("WEATHER_API_KEY", "")
 
 # Functions for currency exchange
 def get_exchange_rates(base_currency="USD"):
@@ -74,6 +74,10 @@ def get_historical_rates(base_currency, target_currency, days=7):
 # Function to get weather information
 def get_weather(city):
     """Get current weather for a city"""
+    if not WEATHER_API_KEY:
+        st.error("Weather API key not configured. Please set WEATHER_API_KEY in your environment variables.")
+        return None
+        
     try:
         url = f"https://api.openweathermap.org/data/2.5/weather?q={city}&appid={WEATHER_API_KEY}&units=metric"
         response = requests.get(url)
@@ -86,6 +90,10 @@ def get_weather(city):
 # Updated to use Mistral-7B model from Hugging Face instead of Gemma
 def get_ai_recommendation(prompt):
     """Get travel recommendations from Mistral-7B model via Hugging Face"""
+    if not HUGGINGFACE_API_KEY:
+        st.warning("Hugging Face API key not configured. Using template responses.")
+        return get_template_response(prompt)
+        
     try:
         # Using Mistral-7B instead of Gemma for better accessibility
         API_URL = "https://api-inference.huggingface.co/models/mistralai/Mistral-7B-Instruct-v0.2"
