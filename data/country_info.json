@@ -1,0 +1,94 @@
+{
+  "countries": [
+    {
+      "name": "United States",
+      "code": "US",
+      "currency": "USD",
+      "capital": "Washington, D.C.",
+      "region": "Americas",
+      "population": 331002651,
+      "area": 9833517
+    },
+    {
+      "name": "Canada",
+      "code": "CA",
+      "currency": "CAD",
+      "capital": "Ottawa",
+      "region": "Americas",
+      "population": 37742154,
+      "area": 9984670
+    },
+    {
+      "name": "United Kingdom",
+      "code": "GB",
+      "currency": "GBP",
+      "capital": "London",
+      "region": "Europe",
+      "population": 67886011,
+      "area": 243610
+    },
+    {
+      "name": "Australia",
+      "code": "AU",
+      "currency": "AUD",
+      "capital": "Canberra",
+      "region": "Oceania",
+      "population": 25499884,
+      "area": 7692024
+    },
+    {
+      "name": "Japan",
+      "code": "JP",
+      "currency": "JPY",
+      "capital": "Tokyo",
+      "region": "Asia",
+      "population": 126476461,
+      "area": 377975
+    },
+    {
+      "name": "Germany",
+      "code": "DE",
+      "currency": "EUR",
+      "capital": "Berlin",
+      "region": "Europe",
+      "population": 83783942,
+      "area": 357022
+    },
+    {
+      "name": "France",
+      "code": "FR",
+      "currency": "EUR",
+      "capital": "Paris",
+      "region": "Europe",
+      "population": 65273511,
+      "area": 551695
+    },
+    {
+      "name": "India",
+      "code": "IN",
+      "currency": "INR",
+      "capital": "New Delhi",
+      "region": "Asia",
+      "population": 1380004385,
+      "area": 3287263
+    },
+    {
+      "name": "Brazil",
+      "code": "BR",
+      "currency": "BRL",
+      "capital": "Brasília",
+      "region": "Americas",
+      "population": 212559417,
+      "area": 8515767
+    },
+    {
+      "name": "South Africa",
+      "code": "ZA",
+      "currency": "ZAR",
+      "capital": "Pretoria",
+      "region": "Africa",
+      "population": 59308690,
+      "area": 1219090
+    }
+  ]
+}
